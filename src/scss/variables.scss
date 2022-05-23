@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Ubuntu:wght@300;400;500&display=swap");
+
+// :root {
+
+// --folder-projects: #1b998b;
+// --folder-about: #ed217c;
+// --folder-contact: #fffd82;
+
+//   --background-lg-1: #2c001e;
+//   --background-lg-2: #77216f;
+//   --background-lg-3: #e95420;
+
+//   --terminal-top: #333333;
+//   --terminal-body-background: #2c001e;
+
+//   --browser-tabs-background: #25003e;        ---
+//   --browser-tab-background: #440071;
+//   --browser-search: #6200a4;                 ---
+//   --browser-link-background: #ad3bff;        ---
+//   --browser-body-background: #0f1126;
+// }
+
+:root {
+  --teal-80: #00feff;
+  --teal-70: #44ffe3;
+  --teal-60: #76ffc3;
+  --teal-50: #a3ffa3;
+
+  --purple-90: #25003e;
+  --purple-80: #440071;
+  --purple-70: #6200a4;
+  --purple-40: #ad3bff;
+
+  --orange-50: #ff9400;
+
+  --grey-80: #2a2a2e;
+  --grey-40: #b1b1b3;
+  --grey-10: #f9f9fa;
+
+  --dark-text-on-light-background: #0c0c0d;
+  --light-text-on-dark-background: #ffffff;
+
+  //sidebar
+  --svg-projects: #1b998b;
+  --svg-about: #ed217c;
+  --svg-contact: #fffd82;
+  --svg-terminal: #f9f9fa;
+  --svg-menu: #fff;
+
+  --sidebar-background-color: #111111;
+  --sidebar-color: #ffffff;
+
+  //body-background
+  --background-linear-gradient-1: #2c001e;
+  --background-linear-gradient-2: #77216f;
+  --background-linear-gradient-3: #e95420;
+
+  //window
+  --window-top: #333333;
+
+  //terminal
+  --terminal-body-background: #2c001e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --browser-window-backgroud-color: #333;
+    --browser-tabs-background: var(--purple-90);
+    --browser-tab-background: var(--purple-80);
+    --browser-actions-background: var(--purple-70);
+    --browser-search-link-background: var(--purple-40);
+    --browser-page-background: var(--grey-80);
+    --browser-svg-fill: #a0a0af;
+
+    --browser-font-color: var(--light-text-on-dark-background);
+
+    --search-svg-fill-color: rgb(160, 160, 255);
+
+    --filter-color: #fff;
+
+    --body-info-border-color: #fff;
+  }
+}
+
+body.dark {
+  --browser-window-backgroud-color: #333;
+  --browser-tabs-background: var(--purple-90);
+  --browser-tab-background: var(--purple-80);
+  --browser-search: var(--purple-70);
+  --browser-link-background: var(--purple-40);
+  --browser-body-background: var(--grey-80);
+
+  --browser-font-color: var(--light-text-on-dark-background);
+
+  --search-svg-fill-color: rgb(160, 160, 255);
+
+  --filter-color: #fff;
+
+  --body-info-border-color: #fff;
+}
+
+body.light {
+  --browser-window-backgroud-color: var(--grey-10);
+  --browser-tabs-background: #42c2ff;
+  --browser-tab-background: #85f4ff;
+  --browser-search: #b8fff9;
+  --browser-link-background: #effffd;
+  --browser-body-background: #effffd;
+
+  --browser-font-color: var(--dark-text-on-light-background);
+
+  --search-svg-fill-color: #42c2ff;
+
+  --filter-color: #42c2ff;
+
+  --body-info-border-color: #000;
+}

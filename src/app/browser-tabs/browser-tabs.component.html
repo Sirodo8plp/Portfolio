@@ -1,0 +1,41 @@
+<div class="browser-tabs">
+  <div
+    class="browser-tab"
+    [ngClass]="tab === 'projects' ? 'browser-tab--selected' : ''"
+    (click)="RedirectToProjects()"
+  >
+    <div class="browser-tab-icon-container">
+      <img src="/assets/Images/project.png" />
+    </div>
+    <p>T/G Projects</p>
+    <div class="svg-container">
+      <svg><use href="./assets/sprite.svg#icon-clear" /></svg>
+    </div>
+  </div>
+  <div
+    class="browser-tab"
+    [ngClass]="tab === 'about' ? 'browser-tab--selected' : ''"
+    (click)="RedirectToAbout()"
+  >
+    <div class="browser-tab-icon-container">
+      <img src="/assets/Images/about-me.jpg" />
+    </div>
+    <p>About</p>
+    <div class="svg-container">
+      <svg><use href="./assets/sprite.svg#icon-clear" /></svg>
+    </div>
+  </div>
+  <div
+    class="browser-tab"
+    [ngClass]="tab === 'contact' ? 'browser-tab--selected' : ''"
+    (click)="RedirectToContact()"
+  >
+    <div class="browser-tab-icon-container">
+      <img src="/assets/Images/contact-me.jpg" />
+    </div>
+    <p>Contact Me</p>
+    <div class="svg-container">
+      <svg><use href="./assets/sprite.svg#icon-clear" /></svg>
+    </div>
+  </div>
+</div>

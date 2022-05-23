@@ -1,0 +1,36 @@
+.contact {
+  background-color: var(--browser-body-background);
+  min-height: 69vh;
+  overflow-y: scroll;
+  padding: 0.5rem;
+  min-height: 0;
+  width: 100%;
+
+  &-title {
+    text-align: center;
+    color: var(--browser-font-color);
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    color: #000;
+    max-width: max-content;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border: 1px solid var(--body-info-border-color);
+  }
+
+  &-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+
+    &--linkedin {
+      fill: #0077b5;
+    }
+  }
+}

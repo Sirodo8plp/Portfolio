@@ -1,0 +1,52 @@
+<div class="terminal-window">
+  <div class="window-top">
+    <svg class="icon icon--terminal">
+      <use href="assets/sprite.svg#icon-terminal"></use>
+    </svg>
+    <p class="window-title">theoGian@theo-pc: {{ currentLocation }}</p>
+    <div class="terminal-buttons">
+      <button class="terminal-button">&#9472;</button>
+      <button class="terminal-button">&#9723;</button>
+      <button class="terminal-button terminal-button--exit">&#10005;</button>
+    </div>
+  </div>
+  <div class="terminal-body">
+    <p class="terminal-info" *ngIf="showHelp === true">
+      Welcome to my portfolio site! <br />
+      <span class="terminal-info--green">Terminal Usage</span><br />
+      clear: Clears the entire application screen. <br />
+      ls: List computer files. <br />
+      cd &lt;directory&gt;: Change the current working directory. <br />
+      cat &lt;filename&gt;: See the contents of a file. <br />
+    </p>
+    <div class="terminal-history">
+      <div *ngFor="let previousCommand of commandHistory">
+        <p class="terminal-location">
+          theoGian@theo-pc:{{ previousCommand.location }}
+          <span class="terminal-location-span-1">$</span>
+          <span class="terminal-location-span-2">{{
+            previousCommand.command
+          }}</span>
+        </p>
+
+        <div
+          [innerHTML]="previousCommand.output"
+          [ngClass]="{ 'terminal-error-div': previousCommand.isError === true }"
+        ></div>
+      </div>
+    </div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f); f.reset()">
+      <label for="terminal-input" class="terminal-label"
+        >theoGian@theo-pc:&nbsp;{{ currentLocation }}&nbsp;$</label
+      >
+      <input
+        type="text"
+        id="terminal-input"
+        name="terminalInput"
+        class="terminal-input"
+        autocomplete="off"
+        [(ngModel)]="terminalInput"
+      />
+    </form>
+  </div>
+</div>

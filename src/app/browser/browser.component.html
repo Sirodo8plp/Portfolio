@@ -1,0 +1,18 @@
+<div class="window-top">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg"
+  />
+  <p class="window-title">
+    {{ title }}
+  </p>
+  <div class="window-buttons">
+    <button class="window-button">&#9472;</button>
+    <button class="window-button">&#9723;</button>
+    <button class="window-button window-button--exit">&#10005;</button>
+  </div>
+</div>
+<app-browser-tabs [tab]="browserTab"></app-browser-tabs>
+<app-browser-search [tab]="browserTab"></app-browser-search>
+<app-browser-projects *ngIf="browserTab === 'projects'"></app-browser-projects>
+<app-browser-about *ngIf="browserTab === 'about'"></app-browser-about>
+<app-browser-contact *ngIf="browserTab === 'contact'"></app-browser-contact>

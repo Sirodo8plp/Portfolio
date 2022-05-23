@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@use "scss/globals";
+@use "scss/variables";
+@use "scss/window";
+@use "scss/svgs";
+
+@use "scss/components/app-browser";
+@use "scss/components/app-browser-projects";
+@use "scss/components/app-desktop";
+@use "scss/components/app-terminal";
+@use "scss/components/app-browser-about";
+@use "scss/components/app-browser-contact";
+@use "scss/components/info";

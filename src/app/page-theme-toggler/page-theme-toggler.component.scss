@@ -1,0 +1,32 @@
+.theme-menu {
+  position: absolute;
+  bottom: 220%;
+  left: -10px;
+  width: 7.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  list-style-type: none;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+
+  @media screen and (max-width: 26.75rem) {
+    bottom: 0;
+    top: 110%;
+    right: 10px;
+    height: max-content;
+    left: -51px;
+  }
+
+  & li {
+    padding: 0.5rem;
+    cursor: default;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+    }
+  }
+  &-icon {
+    position: relative;
+  }
+}

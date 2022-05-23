@@ -1,0 +1,24 @@
+<section class="projects">
+  <div *ngFor="let project of projects" class="project">
+    <h2 class="project-title">{{ project.name }}</h2>
+    <p class="project-description">{{ project.description }}</p>
+    <ul class="project-tags">
+      <li class="project-tags-item project-tags-item--first">
+        <svg class="project-tags-sign">
+          <use href="assets/sprite.svg#icon-tag-cord" />
+        </svg>
+      </li>
+      <li *ngFor="let tag of project.tags" class="project-tags-item">
+        <p>
+          {{ tag }}
+        </p>
+      </li>
+    </ul>
+    <p class="project-github">
+      <svg>
+        <use href="assets/sprite.svg#icon-github2" />
+      </svg>
+      <a href="{{ project.githubLink }}">{{ project.githubLink }}</a>
+    </p>
+  </div>
+</section>

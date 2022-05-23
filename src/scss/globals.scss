@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: all 0.1s linear;
+  box-sizing: border-box;
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$min_width: 360px;
+$max_width: 1920px;
+$min_font: 13px;
+$max_font: 20px;
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  overflow: auto;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--background-linear-gradient-1),
+    var(--background-linear-gradient-2),
+    var(--background-linear-gradient-3)
+  );
+
+  & app-root {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 26.75rem) {
+      flex-direction: column;
+    }
+  }
+}
+
+a {
+  color: inherit;
+}

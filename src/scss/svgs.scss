@@ -1,0 +1,31 @@
+.icon {
+  display: block;
+  margin: 0 auto;
+  width: 2.5rem;
+  height: 2.5em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+
+  &-adjustments {
+    width: 1.03125em;
+  }
+
+  &--projects {
+    fill: var(--svg-projects) !important;
+  }
+
+  &--about {
+    fill: var(--svg-about);
+  }
+
+  &--contact {
+    fill: var(--svg-contact);
+  }
+
+  &--terminal {
+    margin: 0 !important;
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+}

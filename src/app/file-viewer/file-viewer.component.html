@@ -1,0 +1,27 @@
+<nav class="folder-navbar">
+  <ul class="folder-navigation">
+    <li class="folder">
+      <a routerLink="/browser/projects">
+        <img
+          class="folder-firefox"
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg"
+        />
+      </a>
+    </li>
+    <li class="folder" id="terminalIcon">
+      <a routerLink="/terminal">
+        <svg class="icon">
+          <use href="assets/sprite.svg#icon-terminal"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="folder folder-menu-icon" (click)="HandleMenu()">
+      <svg class="icon">
+        <use href="assets/sprite.svg#icon-adjustments"></use>
+      </svg>
+      <app-page-theme-toggler
+        [isMenuOpen]="isMenuOpen"
+      ></app-page-theme-toggler>
+    </li>
+  </ul>
+</nav>

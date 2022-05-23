@@ -1,0 +1,66 @@
+.folder {
+  width: max-content;
+  transition: all 1s ease;
+
+  &-firefox {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &:nth-child(1) {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+    @media screen and (max-width: 26.75rem) {
+      margin: 0 0.5rem 0 0.5rem;
+    }
+  }
+
+  &:last-child {
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+
+    @media screen and (max-width: 26.75rem) {
+      margin: 0 0.5rem 0 auto;
+    }
+  }
+
+  & svg {
+    cursor: pointer;
+  }
+
+  &-navbar {
+    max-width: max-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--sidebar-color);
+    min-height: 100vh;
+
+    @media screen and (max-width: 26.75rem) {
+      min-height: 0;
+      max-height: fit-content;
+      padding: 0.2rem;
+      max-width: 100%;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    margin: 0 0.5rem;
+    min-height: 100vh;
+
+    @media screen and (max-width: 26.75rem) {
+      flex-direction: row;
+      min-height: 0;
+      justify-content: flex-start;
+    }
+  }
+}
+
+app-page-theme-toggler {
+  position: relative;
+}
